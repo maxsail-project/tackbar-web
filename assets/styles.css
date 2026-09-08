@@ -22,15 +22,13 @@ a:focus-visible { outline: 3px solid var(--color-navy); outline-offset: 5px; }
 .site-header { justify-content: space-between; padding-block: 1rem; }
 nav a { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; justify-content: center; }
 [aria-current="page"] { font-weight: 750; text-decoration-thickness: .15em; }
-.brand { font-size: 1.6rem; font-weight: 750; letter-spacing: -.045em; text-decoration: none; }
-.brand span { color: var(--color-blue); }
-a.brand { display: inline-flex; align-items: center; min-height: 44px; }
+.brand { display: inline-flex; align-items: center; min-height: 44px; }
+.brand img { display: block; height: clamp(4rem, 6vw, 4.5rem); width: auto; }
 h1, h2 { line-height: 1.15; letter-spacing: -.035em; }
 h1 { font-size: clamp(2.5rem, 5.5vw, 4.4rem); margin-block: .25em; }
 h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-top: 0; }
 p { max-width: 62ch; }
 .hero { padding-block: clamp(2rem, 5vw, 4rem); }
-.hero-brand { margin: 0 0 .5rem; font-size: 2rem; }
 .hero-line { margin-block: 1rem; }
 .actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1.5rem; margin-top: 1.5rem; }
 .button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .65rem 1.2rem; color: var(--color-navy); background: var(--color-cyan); border: 2px solid var(--color-navy); border-radius: .2rem; font-weight: 700; text-decoration: none; }
@@ -43,7 +41,7 @@ p { max-width: 62ch; }
 #pilot, #open-source { max-width: 44rem; margin-inline: auto; padding-bottom: 2rem; }
 .contact-link { display: inline-flex; align-items: center; min-height: 44px; font-weight: 650; }
 .site-footer { border-top: 1px solid var(--color-pale); padding-block: 1.5rem; }
-.site-footer .brand { margin-block: 0; }
+.footer-wordmark { display: block; height: 1.25rem; width: auto; }
 .footer-links { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; list-style: none; padding: 0; margin-block: .5rem; }
 .footer-links a { display: inline-flex; align-items: center; min-height: 44px; }
 .site-footer p:last-child { margin-block: .5rem 0; }
