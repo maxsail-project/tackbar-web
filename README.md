@@ -17,7 +17,7 @@ TackBar is an open-source project for dinghy sailors focused on collaborative po
 The TackBar application and product development live in the main repository:
 
 **TackBar:**  
-https://github.com/tackbar
+https://github.com/maxsail-project/tackbar
 
 ## Website
 
