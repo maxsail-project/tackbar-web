@@ -22,23 +22,25 @@ a:focus-visible { outline: 3px solid var(--color-navy); outline-offset: 5px; }
 nav a { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; justify-content: center; }
 [aria-current="page"] { font-weight: 750; text-decoration-thickness: .15em; }
 .brand { display: inline-flex; align-items: center; min-height: 44px; }
-.brand img { display: block; height: clamp(4rem, 6vw, 4.5rem); width: auto; }
+.brand img { display: block; height: 1.8rem; width: auto; }
 h1, h2 { line-height: 1.15; letter-spacing: -.035em; }
-h1 { font-size: clamp(2.5rem, 5.5vw, 4.4rem); margin-block: .25em; }
 h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-top: 0; }
 p { max-width: 62ch; }
-.hero { padding-block: clamp(2rem, 5vw, 4rem); }
+.hero { padding-block: clamp(1.5rem, 3vw, 2.5rem) 2.5rem; text-align: center; }
+.hero-artwork { display: block; width: min(100%, 19rem); height: auto; margin-inline: auto; }
+.hero > p { max-width: 42ch; margin: 1.5rem auto 0; }
+.hero .actions { justify-content: center; }
 .actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1.5rem; margin-top: 1.5rem; }
 .button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .65rem 1.2rem; color: var(--color-white); background: var(--color-navy); border: 2px solid var(--color-navy); border-radius: .2rem; font-weight: 700; text-decoration: none; }
 .button:hover { text-decoration: underline; }
 .secondary { color: var(--color-navy); background: transparent; border-color: transparent; padding-inline: .25rem; text-decoration: underline; }
-.story { padding-block: 2.5rem; }
+.story { padding-block: 2rem; }
 .flow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2rem; list-style: none; padding: 0; margin: 0; }
 .flow li { position: relative; text-align: center; }
 .flow h2 { font-size: clamp(1.35rem, 3.3vw, 2.6rem); font-weight: 850; margin: 0; }
 .flow p { font-size: .85rem; line-height: 1.45; margin: .75rem 0 0; }
 .flow-arrow { position: absolute; width: 1.4rem; height: auto; top: .35rem; right: -1.7rem; }
-.product-proof { padding-block: 2rem 3.5rem; text-align: center; }
+.product-proof { padding-block: 1.5rem 3.5rem; text-align: center; }
 .product-proof h2 { margin-bottom: .6rem; }
 .product-proof p { margin: 0 auto 1.5rem; }
 .product-proof > img { display: block; width: 100%; height: auto; border: 1px solid var(--color-pale); }
@@ -53,8 +55,11 @@ p { max-width: 62ch; }
 .site-footer p:last-child { margin-block: .5rem 0; }
 .skip-link { position: absolute; top: .5rem; left: 1rem; padding: .75rem; background: var(--color-white); transform: translateY(-200%); }
 .skip-link:focus { transform: translateY(0); }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
 @media (max-width: 35rem) {
   .site-header { gap: .25rem; }
+  .brand img { height: 1.6rem; }
+  .hero-artwork { width: min(100%, 16rem); }
   .site-header nav { width: 100%; justify-content: space-between; gap: .5rem; }
   .flow { grid-template-columns: 1fr; gap: 2.75rem; }
   .flow h2 { font-size: 2rem; }
