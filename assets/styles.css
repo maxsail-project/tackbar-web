@@ -43,7 +43,7 @@ p { max-width: 62ch; }
 .mobile-workflow { padding-block: 2rem; text-align: center; }
 .mobile-workflow h2 { max-width: 30ch; margin: 0 auto .65rem; font-size: clamp(1.7rem, 3.5vw, 2.4rem); }
 .mobile-workflow-phone { margin: 0 auto; font-size: 1.1rem; font-weight: 650; }
-.mobile-workflow-steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1.5rem; padding-left: 1.5rem; margin: 1.5rem 0; text-align: left; }
+.mobile-workflow-steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1.25rem; width: min(100%, 52rem); padding-left: 1.5rem; margin: 1.5rem auto; text-align: left; }
 .mobile-workflow-steps li { padding-left: .15rem; font-size: clamp(.9rem, 1.5vw, 1.1rem); font-weight: 650; line-height: 1.4; }
 .mobile-workflow-steps li::marker { font-weight: 400; }
 .mobile-workflow-explanation { margin: 0 auto; font-size: .9rem; }
