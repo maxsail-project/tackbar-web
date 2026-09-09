@@ -40,6 +40,8 @@ p { max-width: 62ch; }
 .flow h2 { font-size: clamp(1.35rem, 3.3vw, 2.6rem); font-weight: 850; margin: 0; }
 .flow p { font-size: .85rem; line-height: 1.45; margin: .75rem 0 0; }
 .flow-arrow { position: absolute; width: 1.4rem; height: auto; top: .35rem; right: -1.7rem; }
+.debrief-context { padding-block: 2rem; text-align: center; }
+.debrief-context p { margin-inline: auto; }
 .mobile-workflow { padding-block: 2rem; text-align: center; }
 .mobile-workflow h2 { max-width: 30ch; margin: 0 auto .65rem; font-size: clamp(1.7rem, 3.5vw, 2.4rem); }
 .mobile-workflow-phone { margin: 0 auto; font-size: 1.1rem; font-weight: 650; }
