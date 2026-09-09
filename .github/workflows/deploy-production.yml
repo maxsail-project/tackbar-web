@@ -1,0 +1,47 @@
+name: Deploy TackBar Web
+
+on:
+  push:
+    branches:
+      - main
+
+permissions: {}
+
+concurrency:
+  group: tackbar-web-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Trigger restricted production deployment
+        shell: bash
+        env:
+          PROD_HOST: ${{ secrets.PROD_HOST }}
+          PROD_SSH_KEY: ${{ secrets.PROD_SSH_KEY }}
+          PROD_KNOWN_HOSTS: ${{ secrets.PROD_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          : "${PROD_HOST:?Missing PROD_HOST}"
+          : "${PROD_SSH_KEY:?Missing PROD_SSH_KEY}"
+          : "${PROD_KNOWN_HOSTS:?Missing PROD_KNOWN_HOSTS}"
+
+          umask 077
+          mkdir -p "$HOME/.ssh"
+          chmod 700 "$HOME/.ssh"
+          key_file=$(mktemp "$RUNNER_TEMP/tackbar-deploy-key.XXXXXX")
+          trap 'rm -f -- "$key_file"' EXIT
+          printf '%s\n' "$PROD_SSH_KEY" > "$key_file"
+          printf '%s\n' "$PROD_KNOWN_HOSTS" > "$HOME/.ssh/known_hosts"
+          chmod 600 "$key_file" "$HOME/.ssh/known_hosts"
+
+          ssh -T -n \
+            -i "$key_file" \
+            -o BatchMode=yes \
+            -o IdentitiesOnly=yes \
+            -o StrictHostKeyChecking=yes \
+            -o UserKnownHostsFile="$HOME/.ssh/known_hosts" \
+            -o ConnectTimeout=30 \
+            "ubuntu@$PROD_HOST" /home/ubuntu/bin/deploy-tackbar-web
