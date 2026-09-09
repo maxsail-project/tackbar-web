@@ -61,7 +61,7 @@ Additional sailing devices and data sources will be added progressively.
 
 TackBar is an open-source project.
 
-The website code in this repository is released under the MIT License.
+The website code in this repository is released under the Mozilla Public License 2.0 (MPL-2.0).
 
 Open-source refers to the project code. Personal sailing data, GPS tracks and participant information are not published as open data.
 
