@@ -275,36 +275,50 @@ Until explicitly implemented, do not assume that `app.tackbar.eu` is publicly av
 
 ---
 
-## Git workflow
+## Git autonomy for low-risk changes
 
-Git remains human-controlled.
+Git remains human-controlled by default, but Codex may stage, commit and push
+low-risk changes when the task explicitly authorizes autonomous publication.
 
-Codex must never automatically:
+Low-risk changes may include:
 
-* stage files;
-* commit;
-* push;
-* create tags;
-* create releases;
-* merge branches.
+* copy and wording corrections;
+* small CSS/layout refinements;
+* accessibility fixes with no product-behavior change;
+* broken or corrected links;
+* equivalent English/Spanish editorial updates;
+* other narrowly scoped presentation fixes.
 
-Never use:
+For these changes Codex may:
 
-```bash
+1. inspect and implement the requested change;
+2. validate it;
+3. review the diff;
+4. stage only the exact files changed for the task;
+5. create one focused commit;
+6. push to the explicitly authorized branch.
+
+Codex must never use:
+
 git add .
 git add -A
 git add --all
-```
 
-If Git operations are explicitly requested, operate only on the exact confirmed files.
+Autonomous commit/push is NOT allowed for changes involving:
 
-Before reporting completion, show or summarize:
+* product behavior or scope;
+* architecture;
+* dependencies or build systems;
+* security or authentication;
+* privacy, consent or personal-data handling;
+* deployment infrastructure;
+* DNS, Caddy or server configuration;
+* application/backend behavior;
+* integrations or ingestion;
+* supported capability claims;
+* changes whose risk classification is unclear.
 
-* files changed;
-* relevant behavior changed;
-* behavior intentionally left unchanged;
-* validation performed;
-* any remaining limitations or decisions needed.
+When uncertain, default to human review and do not commit or push.
 
 ---
 
