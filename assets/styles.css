@@ -48,6 +48,7 @@ p { max-width: 62ch; }
 .debrief-context { max-width: 48rem; margin-inline: auto; padding-block: clamp(3rem, 7vw, 5rem); text-align: center; }
 .debrief-context p { margin-inline: auto; }
 .debrief-questions { font-size: clamp(1.15rem, 2.8vw, 1.45rem); font-weight: 650; line-height: 1.55; }
+.debrief-philosophy { margin-top: 1.5rem; font-weight: 650; }
 .product-proof { padding-block: clamp(3rem, 7vw, 5rem); text-align: center; }
 .product-proof h2 { margin-bottom: .6rem; }
 .product-proof > p { margin: 0 auto 1.5rem; }
