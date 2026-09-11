@@ -50,12 +50,17 @@ p { max-width: 62ch; }
 .mobile-workflow-steps li::marker { font-weight: 400; }
 .mobile-workflow-explanation { margin: 0 auto; font-size: .9rem; }
 .mobile-workflow-culture { margin: 1rem auto 0; font-size: .8rem; }
-.product-proof { padding-block: 1.5rem 3.5rem; text-align: center; }
-.product-proof h2 { margin-bottom: .6rem; }
-.product-proof p { margin: 0 auto 1.5rem; }
-.product-proof > img { display: block; width: 100%; height: auto; border: 1px solid var(--color-pale); }
-.personal-tackbar { max-width: 44rem; margin-inline: auto; padding-bottom: 2rem; }
-.release-reference { font-size: .8rem; }
+.product-proof { padding-block: 1.5rem 3.5rem; }
+.product-proof-intro { max-width: 44rem; margin-inline: auto; text-align: center; }
+.product-proof-intro h2 { margin-bottom: .6rem; }
+.product-proof-intro p { margin: 0; }
+.product-proof-items { margin-top: 2rem; }
+.product-proof-item { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); align-items: center; gap: clamp(1.5rem, 4vw, 3.5rem); padding-block: 2.5rem; border-top: 1px solid var(--color-pale); }
+.product-proof-item:nth-child(even) .product-proof-copy { order: 2; }
+.product-proof-copy h3 { margin: 0; font-size: clamp(1.3rem, 2.5vw, 1.8rem); line-height: 1.2; letter-spacing: -.03em; }
+.product-proof-copy p { margin: .75rem 0 0; }
+.product-proof-item img { display: block; width: 100%; aspect-ratio: 16 / 10; height: auto; border: 1px solid var(--color-pale); object-fit: cover; object-position: top; }
+.release-reference { margin: 0; text-align: center; font-size: .8rem; }
 #pilot, #open-source { max-width: 44rem; margin-inline: auto; padding-bottom: 2rem; }
 .contact-link { display: inline-flex; align-items: center; min-height: 44px; font-weight: 650; }
 #open-source { font-size: .85rem; }
@@ -78,4 +83,6 @@ p { max-width: 62ch; }
   .flow-arrow { width: 1.25rem; top: auto; bottom: -2rem; right: calc(50% - .625rem); transform: rotate(90deg); }
   .mobile-workflow-steps { grid-template-columns: 1fr; gap: .55rem; width: fit-content; max-width: 100%; margin: 1.5rem auto; }
   .mobile-workflow-steps li { font-size: 1rem; }
+  .product-proof-item { grid-template-columns: 1fr; gap: 1.25rem; padding-block: 2rem; }
+  .product-proof-item:nth-child(even) .product-proof-copy { order: 0; }
 }
