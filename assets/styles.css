@@ -54,6 +54,8 @@ p { max-width: 62ch; }
 .product-proof h2 { margin-bottom: .6rem; }
 .product-proof p { margin: 0 auto 1.5rem; }
 .product-proof > img { display: block; width: 100%; height: auto; border: 1px solid var(--color-pale); }
+.personal-tackbar { max-width: 44rem; margin-inline: auto; padding-bottom: 2rem; }
+.release-reference { font-size: .8rem; }
 #pilot, #open-source { max-width: 44rem; margin-inline: auto; padding-bottom: 2rem; }
 .contact-link { display: inline-flex; align-items: center; min-height: 44px; font-weight: 650; }
 #open-source { font-size: .85rem; }
