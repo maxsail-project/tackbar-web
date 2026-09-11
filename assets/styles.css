@@ -26,41 +26,35 @@ nav a { display: inline-flex; align-items: center; min-height: 44px; min-width: 
 h1, h2 { line-height: 1.15; letter-spacing: -.035em; }
 h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-top: 0; }
 p { max-width: 62ch; }
-.hero { padding-block: clamp(1.5rem, 3vw, 2.5rem) 2.5rem; text-align: center; }
-.hero-artwork { display: block; width: min(100%, 19rem); height: auto; margin-inline: auto; }
-.hero > p { max-width: 42ch; margin: 1.5rem auto 0; }
+.hero { min-width: 0; min-height: min(41rem, calc(100vh - 5rem)); display: flex; flex-direction: column; align-items: center; justify-content: center; padding-block: clamp(3rem, 8vw, 6rem); text-align: center; }
+.hero-artwork { display: block; width: min(100%, 21rem); height: auto; margin-inline: auto; }
+.hero-lead { width: 100%; max-width: 42ch; margin: 1.5rem auto 0; font-size: clamp(1.15rem, 2.5vw, 1.4rem); font-weight: 650; }
+.hero-thought { width: 100%; max-width: 30ch; margin: 1rem auto 0; font-size: clamp(1rem, 2vw, 1.2rem); line-height: 1.55; }
 .hero .actions { justify-content: center; }
 .actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1.5rem; margin-top: 1.5rem; }
 .button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .65rem 1.2rem; color: var(--color-white); background: var(--color-navy); border: 2px solid var(--color-navy); border-radius: .2rem; font-weight: 700; text-decoration: none; }
 .button:hover { text-decoration: underline; }
 .secondary { color: var(--color-navy); background: transparent; border-color: transparent; padding-inline: .25rem; text-decoration: underline; }
-.story { padding-block: 2rem; }
-.flow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2rem; list-style: none; padding: 0; margin: 0; }
+.story { padding-block: clamp(3rem, 7vw, 5rem); }
+.flow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3rem; list-style: none; padding: 0; margin: 0; }
 .flow li { position: relative; text-align: center; }
 .flow h2 { font-size: clamp(1.35rem, 3.3vw, 2.6rem); font-weight: 850; margin: 0; }
 .flow p { font-size: .85rem; line-height: 1.45; margin: .75rem 0 0; }
-.flow-arrow { position: absolute; width: 1.4rem; height: auto; top: .35rem; right: -1.7rem; }
-.debrief-context { padding-block: 2rem; text-align: center; }
+.flow-arrow { position: absolute; width: 1.4rem; height: auto; top: .35rem; right: -2.2rem; }
+.flow-support { margin: 2rem auto 0; text-align: center; font-size: 1.1rem; font-weight: 700; }
+.workflow-note { max-width: 44rem; margin: 3rem auto 0; padding-top: 2rem; border-top: 1px solid var(--color-pale); text-align: center; }
+.workflow-note p { margin: .35rem auto; }
+.workflow-note-phone { font-size: .8rem; }
+.debrief-context { max-width: 48rem; margin-inline: auto; padding-block: clamp(3rem, 7vw, 5rem); text-align: center; }
 .debrief-context p { margin-inline: auto; }
-.mobile-workflow { padding-block: 2rem; text-align: center; }
-.mobile-workflow h2 { max-width: 30ch; margin: 0 auto .65rem; font-size: clamp(1.7rem, 3.5vw, 2.4rem); }
-.mobile-workflow-phone { margin: 0 auto; font-size: 1.1rem; font-weight: 650; }
-.mobile-workflow-steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1.25rem; width: min(100%, 52rem); padding-left: 1.5rem; margin: 1.5rem auto; text-align: left; }
-.mobile-workflow-steps li { padding-left: .15rem; font-size: clamp(.9rem, 1.5vw, 1.1rem); font-weight: 650; line-height: 1.4; }
-.mobile-workflow-steps li::marker { font-weight: 400; }
-.mobile-workflow-explanation { margin: 0 auto; font-size: .9rem; }
-.mobile-workflow-culture { margin: 1rem auto 0; font-size: .8rem; }
-.product-proof { padding-block: 1.5rem 3.5rem; }
-.product-proof-intro { max-width: 44rem; margin-inline: auto; text-align: center; }
-.product-proof-intro h2 { margin-bottom: .6rem; }
-.product-proof-intro p { margin: 0; }
-.product-proof-items { margin-top: 2rem; }
-.product-proof-item { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); align-items: center; gap: clamp(1.5rem, 4vw, 3.5rem); padding-block: 2.5rem; border-top: 1px solid var(--color-pale); }
-.product-proof-item:nth-child(even) .product-proof-copy { order: 2; }
-.product-proof-copy h3 { margin: 0; font-size: clamp(1.3rem, 2.5vw, 1.8rem); line-height: 1.2; letter-spacing: -.03em; }
-.product-proof-copy p { margin: .75rem 0 0; }
-.product-proof-item img { display: block; width: 100%; aspect-ratio: 16 / 10; height: auto; border: 1px solid var(--color-pale); object-fit: cover; object-position: top; }
-.release-reference { margin: 0; text-align: center; font-size: .8rem; }
+.debrief-questions { font-size: clamp(1.15rem, 2.8vw, 1.45rem); font-weight: 650; line-height: 1.55; }
+.product-proof { padding-block: clamp(3rem, 7vw, 5rem); text-align: center; }
+.product-proof h2 { margin-bottom: .6rem; }
+.product-proof > p { margin: 0 auto 1.5rem; }
+.product-proof > img { display: block; width: 100%; aspect-ratio: 16 / 10; height: auto; border: 1px solid var(--color-pale); object-fit: cover; object-position: top; }
+.personal-tackbar { max-width: 44rem; margin-inline: auto; padding-block: 0 3rem; text-align: center; }
+.personal-tackbar p { margin-inline: auto; }
+.release-reference { font-size: .8rem; }
 #pilot, #open-source { max-width: 44rem; margin-inline: auto; padding-bottom: 2rem; }
 .contact-link { display: inline-flex; align-items: center; min-height: 44px; font-weight: 650; }
 #open-source { font-size: .85rem; }
@@ -75,14 +69,10 @@ p { max-width: 62ch; }
 @media (max-width: 35rem) {
   .site-header { gap: .25rem; }
   .brand img { height: 1.6rem; }
-  .hero-artwork { width: min(100%, 16rem); }
+  .hero-artwork { width: 13rem; max-width: 100%; }
   .site-header nav { width: 100%; justify-content: space-between; gap: .5rem; }
   .flow { grid-template-columns: 1fr; gap: 2.75rem; }
   .flow h2 { font-size: 2rem; }
   .flow p { margin-top: .25rem; }
   .flow-arrow { width: 1.25rem; top: auto; bottom: -2rem; right: calc(50% - .625rem); transform: rotate(90deg); }
-  .mobile-workflow-steps { grid-template-columns: 1fr; gap: .55rem; width: fit-content; max-width: 100%; margin: 1.5rem auto; }
-  .mobile-workflow-steps li { font-size: 1rem; }
-  .product-proof-item { grid-template-columns: 1fr; gap: 1.25rem; padding-block: 2rem; }
-  .product-proof-item:nth-child(even) .product-proof-copy { order: 0; }
 }
