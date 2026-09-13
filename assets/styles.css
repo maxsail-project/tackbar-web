@@ -77,3 +77,32 @@ p { max-width: 62ch; }
   .flow p { margin-top: .25rem; }
   .flow-arrow { width: 1.25rem; top: auto; bottom: -2rem; right: calc(50% - .625rem); transform: rotate(90deg); }
 }
+
+/* Vakaros sharing guide */
+.guide-page { max-width: 58rem; }
+.guide-intro { max-width: 44rem; margin-inline: auto; padding-block: clamp(2.5rem, 7vw, 4.5rem) 2rem; text-align: center; }
+.guide-intro p { margin-inline: auto; }
+.guide-intro h1 { margin: .25rem auto 1rem; max-width: 18ch; font-size: clamp(2rem, 6vw, 3.6rem); }
+.guide-kicker { margin: 0; color: var(--color-navy); font-size: .85rem; font-weight: 850; letter-spacing: .14em; }
+.guide-lead { font-size: clamp(1.05rem, 2.5vw, 1.3rem); }
+.guide-steps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; list-style: none; padding: 0; margin: 0; }
+.guide-step { min-width: 0; padding: 1rem; border: 1px solid var(--color-pale); background: var(--color-white); }
+.guide-step-wide { grid-column: 1 / -1; }
+.guide-step-copy { display: flex; gap: .8rem; align-items: flex-start; margin-bottom: 1rem; }
+.guide-step-copy h2 { margin: .1rem 0 .4rem; font-size: 1.2rem; }
+.guide-step-copy p { margin: 0; font-size: .9rem; }
+.guide-step-number { flex: 0 0 auto; display: inline-grid; place-items: center; width: 2.2rem; height: 2.2rem; border-radius: 50%; color: var(--color-white); background: var(--color-navy); font-weight: 850; }
+.guide-step > img, .guide-final-layout > img { display: block; width: 100%; height: auto; border: 1px solid var(--color-pale); background: var(--color-background); }
+.guide-final-layout { display: grid; grid-template-columns: minmax(0, .8fr) minmax(16rem, 1.2fr); gap: 1.5rem; align-items: center; }
+.guide-checklist h3 { margin-top: 0; }
+.guide-checklist ul { padding-left: 1.25rem; }
+.guide-checklist li + li { margin-top: .55rem; }
+.guide-note, .guide-help { max-width: 44rem; margin: 2rem auto 0; padding: 1.25rem; border-top: 1px solid var(--color-pale); text-align: center; }
+.guide-note p, .guide-help p { margin-inline: auto; }
+.guide-disclaimer { max-width: 48rem; margin: 2.5rem auto 3rem; font-size: .8rem; text-align: center; }
+@media (max-width: 42rem) {
+  .guide-steps { grid-template-columns: 1fr; }
+  .guide-step-wide { grid-column: auto; }
+  .guide-final-layout { grid-template-columns: 1fr; }
+  .guide-step { padding: .85rem; }
+}
