@@ -34,8 +34,9 @@ p { max-width: 62ch; }
 .actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1.5rem; margin-top: 1.5rem; }
 .button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .65rem 1.2rem; color: var(--color-white); background: var(--color-navy); border: 2px solid var(--color-navy); border-radius: .2rem; font-weight: 700; text-decoration: none; }
 .button:hover { text-decoration: underline; }
-.secondary { color: var(--color-navy); background: transparent; border-color: transparent; padding-inline: .25rem; text-decoration: underline; }
-.story { padding-block: clamp(3rem, 7vw, 5rem); }
+.secondary { color: var(--color-navy); background: transparent; }
+.tertiary-action { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; font-size: .9rem; }
+.story { max-width: 56rem; margin-inline: auto; padding-block: clamp(3rem, 7vw, 5rem); }
 .flow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3rem; list-style: none; padding: 0; margin: 0; }
 .flow li { position: relative; text-align: center; }
 .flow h2 { font-size: clamp(1.35rem, 3.3vw, 2.6rem); font-weight: 850; margin: 0; }
@@ -49,19 +50,26 @@ p { max-width: 62ch; }
 .debrief-context p { margin-inline: auto; }
 .debrief-questions { font-size: clamp(1.15rem, 2.8vw, 1.45rem); font-weight: 650; line-height: 1.55; }
 .debrief-philosophy { margin-top: 1.5rem; font-weight: 650; }
-.product-proof { padding-block: clamp(3rem, 7vw, 5rem); text-align: center; }
+.product-proof { max-width: 52rem; margin-inline: auto; padding-block: clamp(3rem, 7vw, 5rem); text-align: center; }
 .product-proof h2 { margin-bottom: .6rem; }
 .product-proof > p { margin: 0 auto 1.5rem; }
-.product-proof > img { display: block; width: 100%; aspect-ratio: 16 / 10; height: auto; border: 1px solid var(--color-pale); object-fit: cover; object-position: top; }
-.demo { max-width: 48rem; margin-inline: auto; padding-block: clamp(3rem, 7vw, 5rem); border-bottom: 1px solid var(--color-pale); text-align: center; }
-.demo p { margin-inline: auto; }
-.demo-actions { justify-content: center; }
-.personal-tackbar { max-width: 44rem; margin-inline: auto; padding-block: 0 3rem; text-align: center; }
+.product-proof .actions { justify-content: center; }
+.product-proof > img { display: block; width: min(100%, 38rem); height: auto; margin: 2rem auto 0; border: 1px solid var(--color-pale); }
+.product-proof > .demo-data-note { max-width: 52ch; margin: 1rem auto 0; font-size: .8rem; }
+.personal-tackbar { max-width: 44rem; margin-inline: auto; padding-block: clamp(3rem, 7vw, 5rem); text-align: center; }
 .personal-tackbar p { margin-inline: auto; }
+.personal-demo-intro { margin-bottom: .25rem; font-size: .9rem; }
+.personal-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .25rem 1.5rem; }
+.personal-actions a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 650; }
 .release-reference { font-size: .8rem; }
-#pilot, #open-source { max-width: 44rem; margin-inline: auto; padding-bottom: 2rem; }
+#pilot { max-width: 44rem; margin-inline: auto; padding-block: clamp(3rem, 7vw, 5rem); text-align: center; }
+#pilot p { margin-inline: auto; }
+.pilot-intro { margin-bottom: .25rem; }
+.pilot-details { max-width: 40rem; margin: 1.5rem auto 0; text-align: left; }
+.pilot-details p:first-child { margin-top: 0; }
+.pilot-details p:last-child { margin-bottom: 0; }
 .contact-link { display: inline-flex; align-items: center; min-height: 44px; font-weight: 650; }
-#open-source { font-size: .85rem; }
+#open-source { max-width: 40rem; margin-inline: auto; padding-bottom: 2rem; font-size: .85rem; }
 #open-source h2 { font-size: 1.1rem; margin-bottom: .5rem; }
 .site-footer { font-size: .8rem; border-top: 1px solid var(--color-pale); padding-block: 1.5rem; }
 .footer-links { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; list-style: none; padding: 0; margin-block: .5rem; }
@@ -75,11 +83,12 @@ p { max-width: 62ch; }
   .brand img { height: 1.6rem; }
   .hero-artwork { width: 13rem; max-width: 100%; }
   .site-header nav { width: 100%; justify-content: space-between; gap: .5rem; }
+  .hero .actions { flex-direction: column; gap: .75rem; }
   .flow { grid-template-columns: 1fr; gap: 2.75rem; }
   .flow h2 { font-size: 2rem; }
   .flow p { margin-top: .25rem; }
   .flow-arrow { width: 1.25rem; top: auto; bottom: -2rem; right: calc(50% - .625rem); transform: rotate(90deg); }
-  .demo-actions { flex-direction: column; gap: .75rem; }
+  .personal-actions { flex-direction: column; align-items: center; gap: .25rem; }
 }
 
 /* Vakaros sharing guide */
