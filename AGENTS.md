@@ -117,7 +117,21 @@ Do not exaggerate capabilities that are not currently implemented.
 
 TackBar is currently in an experimental pilot phase.
 
-Pilot contact:
+The normal pilot entry point is sending a supported Vakaros activity to:
+
+`share@tackbar.eu`
+
+TackBar uses the sailor's own sending email address to identify them. If the
+sailor is not yet an active participant, TackBar may receive and process the
+activity while consent is pending, and the sailor is contacted with the pilot
+and privacy information. The activity must not be exposed through shared
+TackBar Sessions until the sailor explicitly confirms participation.
+
+Sending a track does not constitute consent. Consent follow-up may be handled
+manually; do not claim that the consent-request email or a `/consent/<token>`
+flow is automated unless that behavior has been explicitly confirmed.
+
+General help and contact address:
 
 `maxsail.project@gmail.com`
 
@@ -130,9 +144,7 @@ Do not advertise additional formats, devices, integrations, or automatic ingesti
 
 In particular, future integrations must not be presented as currently available.
 
-Participation requests and legal consent are separate actions.
-
-Sending an email requesting access does not constitute consent to participate.
+Sending a track and giving participation consent are separate actions.
 
 ---
 

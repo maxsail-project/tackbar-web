@@ -46,7 +46,19 @@ This repository does **not** contain the TackBar application itself.
 
 TackBar is currently in an experimental pilot phase.
 
-Sailors interested in participating can contact:
+The normal way to enter the pilot is to send a supported Vakaros activity from
+your own email address to:
+
+**share@tackbar.eu**
+
+TackBar uses the sending email address to identify the sailor. If you are not
+yet an active participant, TackBar may receive and process the activity while
+your consent is pending and will contact you with the pilot and privacy
+information. Sending a track does not constitute consent, and the activity is
+not exposed through shared TackBar Sessions until you explicitly confirm your
+participation. For now, the consent follow-up may be handled manually.
+
+For general help or questions, contact:
 
 **maxsail.project@gmail.com**
 
@@ -55,7 +67,7 @@ Current pilot data support includes Vakaros exports in:
 - `.csv`
 - `.csv.gz`
 
-Additional sailing devices and data sources will be added progressively.
+No other formats or data sources are currently supported by the pilot.
 
 ## Open source
 
