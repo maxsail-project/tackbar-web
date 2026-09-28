@@ -54,7 +54,9 @@ p { max-width: 62ch; }
 .product-proof h2 { margin-bottom: .6rem; }
 .product-proof > p { margin: 0 auto 1.5rem; }
 .product-proof .actions { justify-content: center; }
-.product-proof > img { display: block; width: min(100%, 38rem); height: auto; margin: 2rem auto 0; border: 1px solid var(--color-pale); }
+.demo-visual { width: min(100%, 40rem); margin: 2rem auto 0; }
+.tablet-frame { padding: .55rem; overflow: hidden; border-radius: 1rem; background: var(--color-navy); box-shadow: 0 .8rem 2rem rgb(1 54 99 / 14%); }
+.tablet-frame img { display: block; width: 100%; height: auto; border-radius: .45rem; }
 .product-proof > .demo-data-note { max-width: 52ch; margin: 1rem auto 0; font-size: .8rem; }
 .personal-tackbar { max-width: 44rem; margin-inline: auto; padding-block: clamp(3rem, 7vw, 5rem); text-align: center; }
 .personal-tackbar p { margin-inline: auto; }
@@ -84,6 +86,8 @@ p { max-width: 62ch; }
   .hero-artwork { width: 13rem; max-width: 100%; }
   .site-header nav { width: 100%; justify-content: space-between; gap: .5rem; }
   .hero .actions { flex-direction: column; gap: .75rem; }
+  .tablet-frame { padding: .35rem; border-radius: .7rem; }
+  .tablet-frame img { border-radius: .35rem; }
   .flow { grid-template-columns: 1fr; gap: 2.75rem; }
   .flow h2 { font-size: 2rem; }
   .flow p { margin-top: .25rem; }
