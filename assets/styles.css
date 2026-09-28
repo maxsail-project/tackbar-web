@@ -53,6 +53,9 @@ p { max-width: 62ch; }
 .product-proof h2 { margin-bottom: .6rem; }
 .product-proof > p { margin: 0 auto 1.5rem; }
 .product-proof > img { display: block; width: 100%; aspect-ratio: 16 / 10; height: auto; border: 1px solid var(--color-pale); object-fit: cover; object-position: top; }
+.demo { max-width: 48rem; margin-inline: auto; padding-block: clamp(3rem, 7vw, 5rem); border-bottom: 1px solid var(--color-pale); text-align: center; }
+.demo p { margin-inline: auto; }
+.demo-actions { justify-content: center; }
 .personal-tackbar { max-width: 44rem; margin-inline: auto; padding-block: 0 3rem; text-align: center; }
 .personal-tackbar p { margin-inline: auto; }
 .release-reference { font-size: .8rem; }
@@ -76,6 +79,7 @@ p { max-width: 62ch; }
   .flow h2 { font-size: 2rem; }
   .flow p { margin-top: .25rem; }
   .flow-arrow { width: 1.25rem; top: auto; bottom: -2rem; right: calc(50% - .625rem); transform: rotate(90deg); }
+  .demo-actions { flex-direction: column; gap: .75rem; }
 }
 
 /* Vakaros sharing guide */
