@@ -46,7 +46,7 @@ This repository does **not** contain the TackBar application itself.
 
 TackBar is currently in an experimental pilot phase.
 
-The normal way to enter the pilot is to send a supported Vakaros activity from
+The normal way to enter the pilot is to send a supported sailing activity from
 your own email address to:
 
 **share@tackbar.eu**
@@ -62,12 +62,18 @@ For general help or questions, contact:
 
 **maxsail.project@gmail.com**
 
-Current pilot data support includes Vakaros exports in:
+The prepared website copy covers Vakaros CSV/VKX and standard GPX tracks:
 
 - `.csv`
 - `.csv.gz`
+- `.vkx`
+- `.vkx.gz`
+- plain `.gpx` (uncompressed)
 
-No other formats or data sources are currently supported by the pilot.
+VKX is delivered under TackBar #33. Plain GPX is implemented and documented on
+application `main`, but #32 remains open and release/deployment evidence has
+not been confirmed. Public GPX publication remains pending human verification.
+No additional formats or integrations are advertised.
 
 ## Open source
 
