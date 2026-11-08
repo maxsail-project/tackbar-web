@@ -1,0 +1,200 @@
+name: Website Change
+description: Propose a focused TackBar public website content, design, accessibility, or repository documentation change.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to normalize a proposed website change for review. Completing it does not approve the change or make it ready for implementation.
+
+        Issue conventions (apply after creation):
+        - Rename the Issue to `[#ID] Short English title` once GitHub assigns the Issue number.
+        - Add `bug` only for a demonstrated defect. This repository does not use `group:*` labels.
+        - Do not use labels to duplicate Issue state or priority.
+
+        Every push to `main` deploys the website to production.
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      description: Select the current proposal state. This selection does not itself approve the Issue.
+      options:
+        - Pending / proposed exploration
+        - Pending product decision
+        - Pending final visual decision
+        - Ready for implementation
+    validations:
+      required: true
+
+  - type: textarea
+    id: context_evidence
+    attributes:
+      label: Context / evidence
+      description: Describe the feedback, finding, or TackBar change that motivates this Issue.
+      placeholder: Include concrete observations, screenshots, or links. Keep private pilot data out of public Issues.
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: State the focused problem to solve without prescribing unrelated scope.
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_baseline
+    attributes:
+      label: Current website baseline
+      description: Record what the website and this repository's documents currently say or do, including the commit reviewed and any related completed Issue.
+    validations:
+      required: true
+
+  - type: textarea
+    id: website_goal
+    attributes:
+      label: Website / communication goal
+      description: Explain what visitors or pilot sailors should understand or be able to do after this change.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Define the smallest coherent change proposed by this Issue.
+    validations:
+      required: true
+
+  - type: textarea
+    id: language_parity
+    attributes:
+      label: English / Spanish parity
+      description: List the affected pages and metadata in each language. Both versions must remain semantically equivalent.
+      placeholder: |
+        - EN: index.html, share-vakaros/index.html
+        - ES: es/index.html, es/compartir-vakaros/index.html
+        Use "Not applicable" only for changes with no visitor-facing text.
+    validations:
+      required: true
+
+  - type: textarea
+    id: capability_claims
+    attributes:
+      label: Supported capability claims
+      description: List each capability, format, device, or integration the website would state, and the delivered TackBar Issue, release, or docs/current/ specification supporting it. New claims require product-owner approval.
+      placeholder: |
+        - Claim -> supporting TackBar Issue, release, or specification
+        Use "None" when no claim is added or changed.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: privacy_consent
+    attributes:
+      label: Privacy and consent wording
+      description: Changes to privacy, consent, personal-data, or participation wording always require human review.
+      options:
+        - Not affected
+        - Affected - human review required
+    validations:
+      required: true
+
+  - type: textarea
+    id: compatibility_constraints
+    attributes:
+      label: Existing content / compatibility constraints
+      description: Identify what must remain unchanged, such as brand messaging, the domain model, navigation, or the static site without dependencies.
+      placeholder: Use "None identified" only after checking the current website and AGENTS.md.
+    validations:
+      required: true
+
+  - type: textarea
+    id: closed_decisions
+    attributes:
+      label: Closed decisions
+      description: List the product, content, or design decisions already resolved.
+      placeholder: Use "None" when no decision has yet been closed.
+    validations:
+      required: true
+
+  - type: textarea
+    id: open_decisions
+    attributes:
+      label: Open decisions
+      description: List decisions that must be resolved before the Issue can be implemented safely.
+      placeholder: Use "None" only when all implementation-blocking decisions are closed.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: documentation_impact
+    attributes:
+      label: Documentation impact
+      description: Classify the impact on README.md, AGENTS.md, and ROADMAP.md. Selection does not authorize documentation changes.
+      options:
+        - No impact
+        - Review required
+        - Change required before implementation
+    validations:
+      required: true
+
+  - type: textarea
+    id: documentation_rationale
+    attributes:
+      label: Documentation impact - affected documents / rationale
+      description: Optionally identify affected files and explain the classification above. This does not authorize edits.
+
+  - type: textarea
+    id: preferred_direction
+    attributes:
+      label: Preferred direction
+      description: Optionally describe a bounded implementation or design direction.
+      placeholder: Leave product decisions in Open decisions rather than resolving them through an implementation preference.
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance criteria
+      description: List observable, verifiable conditions for accepting the change.
+      placeholder: |
+        - [ ] First acceptance criterion
+        - [ ] Second acceptance criterion
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact and validation - impact
+      description: Classify the expected risk and review depth.
+      options:
+        - Low
+        - Medium
+        - High
+    validations:
+      required: true
+
+  - type: textarea
+    id: validation
+    attributes:
+      label: Impact and validation - strategy
+      description: Define the checks expected before pushing to `main`.
+      placeholder: For example mobile, tablet and desktop layout, links, keyboard navigation, alternative text, and both languages.
+    validations:
+      required: true
+
+  - type: textarea
+    id: non_goals
+    attributes:
+      label: Non-goals
+      description: List adjacent work and interpretations that this Issue explicitly excludes.
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References / related Issues
+      description: Link relevant website or TackBar Issues, releases, or specifications without promoting them.
