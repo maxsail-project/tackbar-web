@@ -23,12 +23,12 @@ https://github.com/maxsail-project/tackbar
 
 This repository contains the public marketing website for TackBar.
 
-Planned domains:
+Domains:
 
-- https://tackbar.eu
-- https://tackbar.es
+- https://tackbar.eu — primary website (English), with the Spanish version at https://tackbar.eu/es/
+- https://tackbar.es — redirects to the Spanish website
 
-The application itself will be available separately at:
+The application itself is served separately at:
 
 - https://app.tackbar.eu
 
@@ -53,16 +53,16 @@ your own email address to:
 
 TackBar uses the sending email address to identify the sailor. If you are not
 yet an active participant, TackBar may receive and process the activity while
-your consent is pending and will contact you with the pilot and privacy
-information. Sending a track does not constitute consent, and the activity is
-not exposed through shared TackBar Sessions until you explicitly confirm your
-participation. For now, the consent follow-up may be handled manually.
+your consent is pending and makes an automatic attempt to email you the pilot
+and privacy information, with a personal link to confirm your decision. Sending
+a track does not constitute consent, and the activity is not exposed through
+shared TackBar Sessions until you explicitly confirm your participation.
 
 For general help or questions, contact:
 
 **maxsail.project@gmail.com**
 
-The prepared website copy covers Vakaros CSV/VKX and standard GPX tracks:
+Current pilot support covers Vakaros CSV/VKX and standard GPX tracks:
 
 - `.csv`
 - `.csv.gz`
@@ -70,10 +70,14 @@ The prepared website copy covers Vakaros CSV/VKX and standard GPX tracks:
 - `.vkx.gz`
 - plain `.gpx` (uncompressed)
 
-VKX is delivered under TackBar #33. Plain GPX is implemented and documented on
-application `main`, but #32 remains open and release/deployment evidence has
-not been confirmed. Public GPX publication remains pending human verification.
-No additional formats or integrations are advertised.
+Available debrief evidence depends on the data in each track. No additional
+formats or integrations are advertised.
+
+For current TackBar capabilities and release status, see the
+[latest release](https://github.com/maxsail-project/tackbar/releases/latest) and
+the [changelog](https://github.com/maxsail-project/tackbar/blob/main/CHANGELOG.md).
+Version numbers are intentionally not kept in this repository's documents or in
+the site copy.
 
 ## Open source
 

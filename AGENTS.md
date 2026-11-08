@@ -77,8 +77,8 @@ Current domain model:
 
 * `tackbar.eu` — primary public website;
 * `tackbar.eu/es` — Spanish version;
-* `tackbar.es` — intended to redirect to the Spanish website;
-* `app.tackbar.eu` — reserved for the TackBar application.
+* `tackbar.es` — redirects to the Spanish website;
+* `app.tackbar.eu` — hosts the TackBar application, including the public demo session and the Demo Sailor links used by the website.
 
 Do not change this domain model unless explicitly requested.
 
@@ -123,19 +123,22 @@ The normal pilot entry point is sending a supported sailing activity to:
 
 TackBar uses the sailor's own sending email address to identify them. If the
 sailor is not yet an active participant, TackBar may receive and process the
-activity while consent is pending, and the sailor is contacted with the pilot
-and privacy information. The activity must not be exposed through shared
-TackBar Sessions until the sailor explicitly confirms participation.
+activity while consent is pending. TackBar makes an automatic consent-request
+attempt by email with the pilot and privacy information (per the TackBar
+`docs/current/access-and-consent.md` specification), and the sailor decides on
+a personal `/consent/<token>` page. The activity must not be exposed through
+shared TackBar Sessions until the sailor explicitly confirms participation.
 
-Sending a track does not constitute consent. Consent follow-up may be handled
-manually; do not claim that the consent-request email or a `/consent/<token>`
-flow is automated unless that behavior has been explicitly confirmed.
+Sending a track does not constitute consent. Consent links are personal
+credentials: never publish them. Do not promise that the email always arrives;
+describe it as an attempt. The approved public demo links are the only
+tokenised links the website may publish.
 
 General help and contact address:
 
 `maxsail.project@gmail.com`
 
-The prepared website copy covers Vakaros CSV/VKX and standard GPX tracks:
+Current supported pilot data formats are Vakaros CSV/VKX and standard GPX tracks:
 
 * `.csv`
 * `.csv.gz`
@@ -143,9 +146,19 @@ The prepared website copy covers Vakaros CSV/VKX and standard GPX tracks:
 * `.vkx.gz`
 * plain `.gpx` (uncompressed)
 
-VKX is delivered under TackBar #33. Plain GPX is implemented and documented on
-application `main`, but #32 remains open and release/deployment evidence has
-not been confirmed. Public GPX publication remains pending human verification.
+Both are delivered in published TackBar releases. Available debrief evidence
+depends on the data in each track; do not imply that telemetry is equivalent
+across formats.
+
+Do not hard-code TackBar version numbers, release status or deployment status
+in website copy or in this repository's documents. Link to TackBar Releases and
+the changelog instead:
+
+* https://github.com/maxsail-project/tackbar/releases/latest
+* https://github.com/maxsail-project/tackbar/blob/main/CHANGELOG.md
+
+Supported-capability claims (for example, new Viewer features) require explicit
+product-owner approval before they are published on the site.
 
 Do not advertise additional formats, devices, integrations, or automatic ingestion mechanisms unless they have been explicitly confirmed for the pilot.
 
@@ -290,7 +303,7 @@ https://github.com/maxsail-project/tackbar
 
 Do not invent URLs for services that do not yet exist.
 
-Until explicitly implemented, do not assume that `app.tackbar.eu` is publicly available.
+`app.tackbar.eu` is publicly available. The website may link to the public demo session and the Demo Sailor links. Do not link to other application URLs, and never link to or publish capability links (tokens) other than the approved demo links.
 
 ---
 
